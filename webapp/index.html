@@ -20,6 +20,8 @@
 	<!-- template skin -->
 	<link id="t-colors" href="color/default.css" rel="stylesheet">
     
+
+
     <!-- =======================================================
         Theme Name: Appland
         Theme URL: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/
@@ -64,6 +66,8 @@
         <!-- /.container -->
     </nav>
 	
+	
+
 	<!-- Section: intro -->
     <section id="intro" class="intro">
 		<div class="intro-content">
@@ -108,6 +112,8 @@
 			
 			
 			<div class="row">
+
+				
 				<div class="col-sm-12 text-center">
 					<!-- presence commission vs nb_mandats -->
 					<div class="embed-responsive embed-responsive-16by9">
@@ -160,6 +166,21 @@
 				<div class="col-sm-12 text-center">
 					<div class="embed-responsive embed-responsive-16by9">
   						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/18.embed"></iframe>
+					</div>
+				</div>
+
+
+				<!-- distance vs présence -->
+				<div class="col-sm-12 text-center">
+					<div class="embed-responsive embed-responsive-16by9">
+  						<iframe class="embed-responsive-item" src="//plot.ly/~mbwordup/3.embed"></iframe>
+					</div>
+				</div>
+				
+				<div class="col-sm-12 text-center">
+					<h5><b>Carte de la présence des parlementaires</b></h5>
+					<div class="embed-responsive embed-responsive-16by9" id="map1">
+  						
 					</div>
 				</div>
 
@@ -218,6 +239,57 @@
 	</section>
 
 
+	<div class="divider-short"></div>
+	
+    <section id="collaborateurs" class="home-section">
+	
+		<div class="container">
+			<div class="row text-center heading">
+				<h2>Les collaborateurs</h2>
+			</div>
+			
+			
+			<div class="row">
+
+				<!-- proportion famille employée -->
+				<div class="col-sm-12 text-center">
+					<div class="embed-responsive embed-responsive-16by9">
+  						<iframe class="embed-responsive-item" src="//plot.ly/~mbwordup/5.embed"></iframe>
+					</div>
+				</div>
+
+				<!-- repartition sexe collaborateurs famille -->
+				<div class="col-sm-12 text-center">
+					<div class="embed-responsive embed-responsive-16by9">
+  						<iframe class="embed-responsive-item" src="//plot.ly/~mbwordup/7.embed"></iframe>
+					</div>
+				</div>
+
+				<!-- repartition sexe collaborateurs all -->
+				<div class="col-sm-12 text-center">
+					<div class="embed-responsive embed-responsive-16by9">
+  						<iframe class="embed-responsive-item" src="//plot.ly/~mbwordup/9.embed"></iframe>
+					</div>
+				</div>
+				
+
+				<!-- proportions homme femme parlementaire et collaborateur -->
+				<div class="col-sm-12 text-center">
+					<div class="embed-responsive embed-responsive-16by9">
+  						<iframe class="embed-responsive-item" src="//plot.ly/~mbwordup/11.embed"></iframe>
+					</div>
+				</div>
+
+				<div class="col-sm-12 text-center">
+					<div class="embed-responsive embed-responsive-16by9">
+  						<iframe class="embed-responsive-item" src="//plot.ly/~mbwordup/13.embed"></iframe>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</section>
+
+
 
 	<section id="callaction" class="home-section paddingtop-40">	
            <div class="container">
@@ -249,6 +321,8 @@
             </div>
 	</section>	
 
+
+	
 	<footer>
 	
 
@@ -303,15 +377,22 @@
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 
-	<!-- Core JavaScript Files -->
-    <script src="js/jquery.min.js"></script>	 
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/jquery.scrollTo.js"></script>
-	<script src="js/nivo-lightbox.min.js"></script>
-    <script src="js/custom.js"></script>
-    
+<!-- D3 script files -->
+<script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+<script src="js/d3-legend.min.js" charset="utf-8"></script>
+<script src="js/departements.js"></script>
+<script src="js/drawMap.js"></script>
+
+<!-- Core JavaScript Files -->
+<script src="js/jquery.min.js"></script>	 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.scrollTo.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/custom.js"></script>
+
+
 </body>
 
 </html>
