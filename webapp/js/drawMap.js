@@ -62,7 +62,7 @@ function draw(div){
             .orient("vertical")
             .cells(scaleCell(width))
             .ascending(true)
-            .title("Présence (semaine sur 12 mois)")
+            .title("Semaines")
             .scale(color);
 
     svg.select(".legendLinear")
