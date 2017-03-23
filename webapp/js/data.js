@@ -245,7 +245,7 @@ var dataPieHommeCollab = new Chart(ctx, {
 ctx = document.getElementById("barCollabRapport").getContext("2d");
 
 var data = {
-    labels: ["1 collaborateur","2 collaborateurs","3 collaborateurs","4 collaborateurs","5 collaborateurs","6 collaborateurs","7 collaborateurs","8 collaborateurs"],
+    labels: ["1-2 collaborateur","3-4 collaborateurs","5+ collaborateurs"],
     datasets: [
         {
             label: "Nome moyen de rapports produits",
@@ -253,24 +253,14 @@ var data = {
                 'rgba(88, 148, 244,0.7)',
                 'rgba(88, 148, 244,0.7)',
                 'rgba(88, 148, 244,0.7)',
-                'rgba(88, 148, 244,0.7)',
-                'rgba(88, 148, 244,0.7)',
-                'rgba(88, 148, 244,0.7)',
-                'rgba(88, 148, 244,0.7)',
-                'rgba(88, 148, 244,0.7)'
             ],
             borderColor: [
                'rgba(88, 148, 244,1)',
                'rgba(88, 148, 244,1)',
                'rgba(88, 148, 244,1)',
-               'rgba(88, 148, 244,1)',
-               'rgba(88, 148, 244,1)',
-               'rgba(88, 148, 244,1)',
-               'rgba(88, 148, 244,1)',
-               'rgba(88, 148, 244,1)'
             ],
             borderWidth: 1,
-            data: [0.8, 0.69, 1.1, 1.09, 1.41, 1.8, 1, 1]
+            data: [0.745, 1.095,1.3025]
         },
         {
             label: "Nombre moyen de propositions écrites",
@@ -278,25 +268,15 @@ var data = {
                 'rgba(43, 219, 184,0.7)',
                 'rgba(43, 219, 184,0.7)',
                 'rgba(43, 219, 184,0.7)',
-                'rgba(43, 219, 184,0.7)',
-                'rgba(43, 219, 184,0.7)',
-                'rgba(43, 219, 184,0.7)',
-                'rgba(43, 219, 184,0.7)',
-                'rgba(43, 219, 184,0.7)',
-                
             ],
             borderColor: [
-               'rgba(43, 219, 184,1)',
-               'rgba(43, 219, 184,1)',
-               'rgba(43, 219, 184,1)',
-               'rgba(43, 219, 184,1)',
-               'rgba(43, 219, 184,1)',
                'rgba(43, 219, 184,1)',
                'rgba(43, 219, 184,1)',
                'rgba(43, 219, 184,1)'
             ],
             borderWidth: 1,
-            data: [1.6, 0.13, 0.48, 0.68, 1.76, 0.94, 3.75, 0]
+            data:[0.865, 0.58,1.6125]
+            
         }
     ]
 };
@@ -318,7 +298,14 @@ var myBarChart = new Chart(ctx, {
 		tooltips: {
 			callbacks: {
 			    label: function (tooltipItems, data) {
-			        return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' rapports produits en moyenne' ;
+			        if (tooltipItems.datasetIndex === 0){
+			        	return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' rapports produits en moyenne' ;
+			        }
+			        else {
+			        	return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' propositions écrites en moyenne' ;
+			        }
+
+			        	
 			    }
 			}
 		}	
