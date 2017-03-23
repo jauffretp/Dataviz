@@ -374,7 +374,7 @@ var dataBarRapportsMandats = {
     ] 
 };
 
-var barPresenceMandats = new Chart(ctx, {
+var barRapportsMandats = new Chart(ctx, {
     type: 'bar',
     data: dataBarRapportsMandats,
     options:{
@@ -384,6 +384,103 @@ var barPresenceMandats = new Chart(ctx, {
             callbacks: {
                 label: function (tooltipItems, data) {
                     return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' rapports produits en moyenne' ;
+                    
+
+                      
+                }
+            }
+          } 
+      }
+});
+
+
+
+ctx = document.getElementById("barAmendementsAge").getContext("2d");
+
+var dataBarAmendementsAge = {
+    labels: ["Entre 30 et 40 ans","Entre 40 et 50 ans","Entre 50 et 60 ans", "Entre 60 et 70 ans", "Plus de 70 ans"],
+    datasets: [
+        {
+            label: "Nombre moyen d'amendements adoptés",
+            backgroundColor: [
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)'
+            ],
+            borderColor: [
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)'
+            ],
+            borderWidth: 1,
+            data: [137, 65.76, 67.48, 60.27, 38.37]
+        }
+    ] 
+};
+
+var barAmendementsAge = new Chart(ctx, {
+    type: 'bar',
+    data: dataBarAmendementsAge,
+    options:{
+        responsive: true,
+        maintainAspectRatio: false,
+        tooltips: {
+            callbacks: {
+                label: function (tooltipItems, data) {
+                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' amendements adoptés en moyenne' ;
+                    
+
+                      
+                }
+            }
+          } 
+      }
+});
+
+
+ctx = document.getElementById("barInterventionsAge").getContext("2d");
+
+var dataBarInterventionsAge = {
+    labels: ["Entre 20 et 30 ans","Entre 30 et 40 ans","Entre 40 et 50 ans","Entre 50 et 60 ans", "Entre 60 et 70 ans", "Plus de 70 ans"],
+    datasets: [
+        {
+            label: "Nombre moyen d'interventions courtes en hémicycle",
+            backgroundColor: [
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)'
+            ],
+            borderColor: [
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)'
+            ],
+            borderWidth: 1,
+            data: [74, 90.2, 70.4, 76.26, 58.59, 28.13]
+        }
+    ] 
+};
+
+var barInterventionsAge = new Chart(ctx, {
+    type: 'bar',
+    data: dataBarInterventionsAge,
+    options:{
+        responsive: true,
+        maintainAspectRatio: false,
+        tooltips: {
+            callbacks: {
+                label: function (tooltipItems, data) {
+                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' interventions courtes en hémicycle en moyenne' ;
                     
 
                       
