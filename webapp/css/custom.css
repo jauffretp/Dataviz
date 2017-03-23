@@ -1,0 +1,27 @@
+/*@media(max-width:991px){
+	.custom-bar-chart:{
+		min-height: 200px;
+	}
+
+};
+
+@media(min-width:992px){
+	.custom-bar-chart:{
+		min-height: 500px; 
+	}
+};*/
+
+
+@media(max-width:991px){
+	.custom-bar-chart{
+		min-height: 200px;
+	}	
+}
+
+
+@media(min-width:992px){
+	.custom-bar-chart{
+		min-height: 500px;
+	}	
+}
+
