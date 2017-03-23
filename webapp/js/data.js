@@ -44,9 +44,10 @@ var myDoughnutChart = new Chart(ctx, {
         pieceLabel: {
       		// mode 'label', 'value' or 'percentage', default is 'percentage'
       		mode: 'percentage',
-      		fontSize: 20,
+      		fontSize: 15,
       		fontColor: '#330000',
-      		fontFamily: "'Lato', sans-serif"
+      		fontFamily: "'Lato', sans-serif",
+      		fontStyle: 'bold'
 
 		},
 		tooltips: {
