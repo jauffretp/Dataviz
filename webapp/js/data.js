@@ -16,7 +16,7 @@ var dataEmploiFamille = {
     ],
     datasets: [
         {
-            data: [13, 87],
+            data: [80, 497],
             backgroundColor: [
                 "#ed0909",
                 "#5894f4"
@@ -44,10 +44,17 @@ var myDoughnutChart = new Chart(ctx, {
         pieceLabel: {
       		// mode 'label', 'value' or 'percentage', default is 'percentage'
       		mode: 'percentage',
-      		fontSize: 30,
+      		fontSize: 20,
       		fontColor: '#330000'
 
-      }	
+		},
+		tooltips: {
+			callbacks: {
+			    label: function (tooltipItems, data) {
+			        return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' députés' ;
+			    }
+			}
+		}	
     }
 });
 
