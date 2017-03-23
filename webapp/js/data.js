@@ -38,14 +38,15 @@ var myDoughnutChart = new Chart(ctx, {
         //     animateScale:true
         // },
         title: {
-            display: true,
+            display: false,
             text: 'Les députés employant un membre de leur famille'
         },
         pieceLabel: {
       		// mode 'label', 'value' or 'percentage', default is 'percentage'
       		mode: 'percentage',
       		fontSize: 20,
-      		fontColor: '#330000'
+      		fontColor: '#330000',
+      		fontFamily: "'Lato', sans-serif"
 
 		},
 		tooltips: {
