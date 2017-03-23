@@ -243,7 +243,6 @@ var dataPieHommeCollab = new Chart(ctx, {
 });
 
 ctx = document.getElementById("barCollabRapport").getContext("2d");
-
 var data = {
     labels: ["1-2 collaborateur","3-4 collaborateurs","5+ collaborateurs"],
     datasets: [
@@ -287,30 +286,22 @@ var myBarChart = new Chart(ctx, {
     data: data,
     options:{
         responsive: true,
-        pieceLabel: {
-      		// mode 'label', 'value' or 'percentage', default is 'percentage'
-      		mode: 'percentage',
-      		fontSize: 15,
-      		fontColor: '#330000',
-      		fontFamily: "'Lato', sans-serif",
-      		fontStyle: 'bold'
-		},
-		tooltips: {
-			callbacks: {
-			    label: function (tooltipItems, data) {
-			        if (tooltipItems.datasetIndex === 0){
-			        	return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' rapports produits en moyenne' ;
-			        }
-			        else {
-			        	return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' propositions écrites en moyenne' ;
-			        }
+        maintainAspectRatio: false,
+      	tooltips: {
+      			callbacks: {
+      			    label: function (tooltipItems, data) {
+      			        if (tooltipItems.datasetIndex === 0){
+      			        	return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' rapports produits en moyenne' ;
+      			        }
+      			        else {
+      			        	return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' propositions écrites en moyenne' ;
+      			        }
 
-			        	
-			    }
-			}
-		}	
-    }
-
+      			        	
+      			    }
+      			}
+      		}	
+      }
 });
 
 
