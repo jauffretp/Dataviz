@@ -243,15 +243,15 @@ var dataPieHommeCollab = new Chart(ctx, {
 });
 
 ctx = document.getElementById("barCollabRapport").getContext("2d");
-var data = {
+var dataBarCollabRapport = {
     labels: ["1-2 collaborateur","3-4 collaborateurs","5+ collaborateurs"],
     datasets: [
         {
-            label: "Nome moyen de rapports produits",
+            label: "Nombre moyen de rapports produits",
             backgroundColor: [
-                'rgba(88, 148, 244,0.7)',
-                'rgba(88, 148, 244,0.7)',
-                'rgba(88, 148, 244,0.7)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
             ],
             borderColor: [
                'rgba(88, 148, 244,1)',
@@ -264,9 +264,9 @@ var data = {
         {
             label: "Nombre moyen de propositions écrites",
             backgroundColor: [
-                'rgba(43, 219, 184,0.7)',
-                'rgba(43, 219, 184,0.7)',
-                'rgba(43, 219, 184,0.7)',
+                'rgba(43, 219, 184,0.8)',
+                'rgba(43, 219, 184,0.8)',
+                'rgba(43, 219, 184,0.8)',
             ],
             borderColor: [
                'rgba(43, 219, 184,1)',
@@ -281,9 +281,9 @@ var data = {
 };
 
 
-var myBarChart = new Chart(ctx, {
+var barCollabRapport = new Chart(ctx, {
     type: 'bar',
-    data: data,
+    data: dataBarCollabRapport,
     options:{
         responsive: true,
         maintainAspectRatio: false,
@@ -304,5 +304,91 @@ var myBarChart = new Chart(ctx, {
       }
 });
 
+ctx = document.getElementById("barPresenceMandats").getContext("2d");
+var dataBarPresenceMandats = {
+    labels: ["1er mandat","2e mandat","3e mandat", "4e mandat"],
+    datasets: [
+        {
+            label: "Présence moyenne en comission",
+            backgroundColor: [
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)'
+            ],
+            borderColor: [
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)'
+            ],
+            borderWidth: 1,
+            data: [48.97, 41.85,40.83, 33.57]
+        }
+    ] 
+};
 
 
+var barPresenceMandats = new Chart(ctx, {
+    type: 'bar',
+    data: dataBarPresenceMandats,
+    options:{
+        responsive: true,
+        maintainAspectRatio: false,
+        tooltips: {
+            callbacks: {
+                label: function (tooltipItems, data) {
+                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en moyenne' ;
+                    
+
+                      
+                }
+            }
+          } 
+      }
+});
+
+
+
+ctx = document.getElementById("barRapportMandats").getContext("2d");
+var dataBarRapportsMandats = {
+    labels: ["1er mandat","2e mandat","3e mandat", "4e mandat"],
+    datasets: [
+        {
+            label: "Nombre moyen de rapports produits",
+            backgroundColor: [
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)'
+            ],
+            borderColor: [
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)'
+            ],
+            borderWidth: 1,
+            data: [1.40, 1.15,1.02, 0.64]
+        }
+    ] 
+};
+
+var barPresenceMandats = new Chart(ctx, {
+    type: 'bar',
+    data: dataBarRapportsMandats,
+    options:{
+        responsive: true,
+        maintainAspectRatio: false,
+        tooltips: {
+            callbacks: {
+                label: function (tooltipItems, data) {
+                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' rapports produits en moyenne' ;
+                    
+
+                      
+                }
+            }
+          } 
+      }
+});
