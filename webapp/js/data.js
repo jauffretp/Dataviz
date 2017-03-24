@@ -547,6 +547,9 @@ var bubbleTweetFollower = new Chart(ctx, {
     options:{
         responsive: true,
         maintainAspectRatio: false,
+        legend:{
+          position:"bottom"
+        },
         scales:{
           yAxes:
             [{
