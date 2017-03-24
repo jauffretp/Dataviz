@@ -307,7 +307,7 @@ var barCollabRapport = new Chart(ctx, {
 
 ctx = document.getElementById("barPresenceMandats").getContext("2d");
 var dataBarPresenceMandats = {
-    labels: ["1er mandat","2e mandat","3e mandat", "4e mandat"],
+    labels: [" 1er mandat "," 2e mandat "," 3e mandat ", " 4e mandat "],
     datasets: [
         {
             label: "Présence moyenne en comission",
@@ -353,7 +353,7 @@ var barPresenceMandats = new Chart(ctx, {
 
 ctx = document.getElementById("barRapportMandats").getContext("2d");
 var dataBarRapportsMandats = {
-    labels: ["1er mandat","2e mandat","3e mandat", "4e mandat"],
+    labels: [" 1er mandat "," 2e mandat "," 3e mandat ", " 4e mandat "],
     datasets: [
         {
             label: "Nombre moyen de rapports produits",
@@ -381,13 +381,18 @@ var barRapportsMandats = new Chart(ctx, {
     options:{
         responsive: true,
         maintainAspectRatio: false,
+        scales:{
+          xAxes:[{
+              scaleLabel:{
+                display:false,
+                labelString:"Nombre de mandat",
+              }
+          }]
+        },
         tooltips: {
             callbacks: {
                 label: function (tooltipItems, data) {
                     return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' rapports produits en moyenne' ;
-                    
-
-                      
                 }
             }
           } 
