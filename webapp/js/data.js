@@ -96,7 +96,14 @@ var pieSexeCollabFamille = new Chart(ctx, {
 		tooltips: {
 			callbacks: {
 			    label: function (tooltipItems, data) {
-			        return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' attaché(e)s parlementaires' ;
+              if(tooltipItems.index === 1){
+                return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' attachés parlementaires «familiaux» ' ;
+              }
+              else{
+                
+                return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' attachées parlementaires «familiales»' ;
+              }
+			        
 			    }
 			}
 		}	
@@ -144,7 +151,12 @@ var pieSexeCollab = new Chart(ctx, {
 		tooltips: {
 			callbacks: {
 			    label: function (tooltipItems, data) {
-			        return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' attaché(e)s parlementaires' ;
+              if(tooltipItems.index === 1){
+                return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' attachés parlementaires' ;
+              }
+              else{
+                return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' attachées parlementaires' ;
+              }
 			    }
 			}
 		}	
@@ -190,7 +202,12 @@ var pieFemmeCollab = new Chart(ctx, {
 		tooltips: {
 			callbacks: {
 			    label: function (tooltipItems, data) {
-			        return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' attaché(e)s parlementaires' ;
+              if(tooltipItems.index === 1){
+                return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' attachés parlementaires' ;
+              }
+              else{
+                return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' attachées parlementaires' ;
+              }
 			    }
 			}
 		}	
@@ -236,7 +253,12 @@ var dataPieHommeCollab = new Chart(ctx, {
 		tooltips: {
 			callbacks: {
 			    label: function (tooltipItems, data) {
-			        return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' attaché(e)s parlementaires' ;
+              if(tooltipItems.index === 1){
+                return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' attachés parlementaires' ;
+              }
+              else{
+                return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' attachées parlementaires' ;
+              }
 			    }
 			}
 		}	
