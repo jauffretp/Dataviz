@@ -572,7 +572,7 @@ var bubbleTweetFollower = new Chart(ctx, {
                     var tweets = data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index]["y"]
                     var followers = data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index]["x"]
                     var name = labelDepute[tooltipItems.datasetIndex][tooltipItems.index]
-                    var tooltip = new Array(name, parti, tweets + " tweets",followers + "followers")
+                    var tooltip = new Array(name, parti, tweets + " tweets",followers + " followers")
                     return tooltip;
                 }
             }
