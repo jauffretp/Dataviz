@@ -2,6 +2,7 @@
 Chart.defaults.global.title.fontSize = 25;
 Chart.defaults.global.title.fontFamily = "'Lato', sans-serif";
 Chart.defaults.global.title.fontColor = '#000000';
+Chart.defaults.global.animation.duration = 0
 
 //Chart.defaults.global.title.fontSize = 20;
 
@@ -495,7 +496,7 @@ var barInterventionsAge = new Chart(ctx, {
 ctx = document.getElementById("barTweetComission").getContext("2d");
 
 var dataTweetComission = {
-    labels: ["Entre 0 et 10k tweets","Entre 10k et 20k tweets","Entre 20k et 30k tweets","Plus de 30k tweets"],
+    labels: ["Entre 0 et 10K tweets","Entre 10K et 20K tweets","Entre 20K et 30K tweets","Plus de 30K tweets"],
     datasets: [
         {
             label: "Nombre moyen d'interventions courtes en hémicycle",
@@ -555,13 +556,23 @@ var bubbleTweetFollower = new Chart(ctx, {
             [{
               scaleLabel:{
                 display:true,
-                labelString:"Nombre de tweets"
+                labelString:"Nombre de tweets",
+                fontSize: 15,
+                fontColor: '#330000',
+                fontFamily: "'Lato', sans-serif",
+                fontStyle: 'bold'
+
               }
             }],
           xAxes:[{
               scaleLabel:{
                 display:true,
-                labelString:"Nombre de followers"
+                labelString:"Nombre de followers",
+                fontSize: 15,
+                fontColor: '#330000',
+                fontFamily: "'Lato', sans-serif",
+                fontStyle: 'bold'
+
               }
           }]
         },
