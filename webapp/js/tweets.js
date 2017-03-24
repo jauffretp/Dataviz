@@ -37,18 +37,18 @@ var dataTweetsParti = {
         backgroundColor:"#FF6384",
         hoverBackgroundColor: "#FF6384"
     },
-    {
-        "data": [
-            {
-                "r": 4,
-                "y": 2590,
-                "x": 1998
-            }
-        ],
-        "label": "Calédonie Ensemble",
-        backgroundColor:"#f4b942",
-        hoverBackgroundColor: "#f4b942"
-    },
+    // {
+    //     "data": [
+    //         {
+    //             "r": 4,
+    //             "y": 2590,
+    //             "x": 1998
+    //         }
+    //     ],
+    //     "label": "Calédonie Ensemble",
+    //     backgroundColor:"#f4b942",
+    //     hoverBackgroundColor: "#f4b942"
+    // },
     {
         "data": [
             {
@@ -135,30 +135,30 @@ var dataTweetsParti = {
         backgroundColor:"#1d4687",
         hoverBackgroundColor: "#1d4687"
     },
-    {
-        "data": [
-            {
-                "r": 4,
-                "y": 1444,
-                "x": 2375
-            }
-        ],
-        "label": "La politique autrement",
-        backgroundColor:"#f4a142",
-        hoverBackgroundColor: "#f4a142"
-    },
-    {
-        "data": [
-            {
-                "r": 4,
-                "y": 3433,
-                "x": 11915
-            }
-        ],
-        "label": "Le Centre pour la France",
-        backgroundColor:"#42eef4",
-        hoverBackgroundColor: "#42eef4"
-    },
+    // {
+    //     "data": [
+    //         {
+    //             "r": 4,
+    //             "y": 1444,
+    //             "x": 2375
+    //         }
+    //     ],
+    //     "label": "La politique autrement",
+    //     backgroundColor:"#f4a142",
+    //     hoverBackgroundColor: "#f4a142"
+    // },
+    // {
+    //     "data": [
+    //         {
+    //             "r": 4,
+    //             "y": 3433,
+    //             "x": 11915
+    //         }
+    //     ],
+    //     "label": "Le Centre pour la France",
+    //     backgroundColor:"#42eef4",
+    //     hoverBackgroundColor: "#42eef4"
+    // },
     {
         "data": [
             {
@@ -751,35 +751,35 @@ var dataTweetsParti = {
         backgroundColor:"#2f73e0",
         hoverBackgroundColor: "#2f73e0"
     },
-    {
-        "data": [
-            {
-                "r": 4,
-                "y": 474,
-                "x": 1421
-            }
-        ],
-        "label": "Mouvement initiative Populaire",
-        backgroundColor:"#f4e242",
-        hoverBackgroundColor: "#f4e242"
-    },
-    {
-        "data": [
-            {
-                "r": 4,
-                "y": 2536,
-                "x": 6445
-            },
-            {
-                "r": 4,
-                "y": 1239,
-                "x": 2849
-            }
-        ],
-        "label": "Non rattaché",
-        backgroundColor:"#6d6d6a",
-        hoverBackgroundColor: "#6d6d6a"
-    },
+    // {
+    //     "data": [
+    //         {
+    //             "r": 4,
+    //             "y": 474,
+    //             "x": 1421
+    //         }
+    //     ],
+    //     "label": "Mouvement initiative Populaire",
+    //     backgroundColor:"#f4e242",
+    //     hoverBackgroundColor: "#f4e242"
+    // },
+    // {
+    //     "data": [
+    //         {
+    //             "r": 4,
+    //             "y": 2536,
+    //             "x": 6445
+    //         },
+    //         {
+    //             "r": 4,
+    //             "y": 1239,
+    //             "x": 2849
+    //         }
+    //     ],
+    //     "label": "Non rattaché",
+    //     backgroundColor:"#6d6d6a",
+    //     hoverBackgroundColor: "#6d6d6a"
+    // },
     {
         "data": [
             {
@@ -797,30 +797,30 @@ var dataTweetsParti = {
         backgroundColor:"#fc0008",
         hoverBackgroundColor: "#fc0008"
     },
-    {
-        "data": [
-            {
-                "r": 4,
-                "y": 378,
-                "x": 1712
-            }
-        ],
-        "label": "Parti communiste guadeloupéen",
-        backgroundColor:"#fc0008",
-        hoverBackgroundColor: "#fc0008"
-    },
-    {
-        "data": [
-            {
-                "r": 4,
-                "y": 2030,
-                "x": 4764
-            }
-        ],
-        "label": "Parti progressiste Martiniquais",
-        backgroundColor:"#FF6384",
-        hoverBackgroundColor: "#FF6384"
-    },
+    // {
+    //     "data": [
+    //         {
+    //             "r": 4,
+    //             "y": 378,
+    //             "x": 1712
+    //         }
+    //     ],
+    //     "label": "Parti communiste guadeloupéen",
+    //     backgroundColor:"#fc0008",
+    //     hoverBackgroundColor: "#fc0008"
+    // },
+    // {
+    //     "data": [
+    //         {
+    //             "r": 4,
+    //             "y": 2030,
+    //             "x": 4764
+    //         }
+    //     ],
+    //     "label": "Parti progressiste Martiniquais",
+    //     backgroundColor:"#FF6384",
+    //     hoverBackgroundColor: "#FF6384"
+    // },
     {
         "data": [
             {
