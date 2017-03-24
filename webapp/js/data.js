@@ -489,3 +489,90 @@ var barInterventionsAge = new Chart(ctx, {
           } 
       }
 });
+
+
+
+ctx = document.getElementById("barTweetComission").getContext("2d");
+
+var dataTweetComission = {
+    labels: ["Entre 0 et 10k tweets","Entre 10k et 20k tweets","Entre 20k et 30k tweets","Plus de 30k tweets"],
+    datasets: [
+        {
+            label: "Nombre moyen d'interventions courtes en hémicycle",
+            backgroundColor: [
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)'
+            ],
+            borderColor: [
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)'
+            ],
+            borderWidth: 1,
+            data: [43.68, 37.18, 28.75, 17]
+        }
+    ] 
+};
+
+var barTweetComission = new Chart(ctx, {
+    type: 'bar',
+    data: dataTweetComission,
+    options:{
+        responsive: true,
+        maintainAspectRatio: false,
+        tooltips: {
+            callbacks: {
+                label: function (tooltipItems, data) {
+                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en comission en moyenne' ;
+                    
+
+                      
+                }
+            }
+          } 
+      }
+});
+
+
+// dataTweetsParti
+// labelDepute
+ctx = document.getElementById("bubbleTweetFollower").getContext("2d");
+
+var bubbleTweetFollower = new Chart(ctx, {
+    type: 'bubble',
+    data: dataTweetsParti,
+    options:{
+        responsive: true,
+        maintainAspectRatio: false,
+        scales:{
+          yAxes:
+            [{
+              scaleLabel:{
+                display:true,
+                labelString:"Nombre de tweets"
+              }
+            }],
+          xAxes:[{
+              scaleLabel:{
+                display:true,
+                labelString:"Nombre de followers"
+              }
+          }]
+        },
+        tooltips: {
+            callbacks: {
+                label: function (tooltipItems, data) {
+                    var parti = data.datasets[tooltipItems.datasetIndex].label
+                    var tweets = data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index]["y"]
+                    var followers = data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index]["x"]
+                    var name = labelDepute[tooltipItems.datasetIndex][tooltipItems.index]
+                    var tooltip = new Array(name, parti, tweets + " tweets",followers + "followers")
+                    return tooltip;
+                }
+            }
+          } 
+      }
+});

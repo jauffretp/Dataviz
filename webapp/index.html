@@ -509,20 +509,40 @@
 
 
 
+				<div class="col-sm-12 text-center">
+					
+					<br/>
+					<h5>
+						<b>
+							Présence moyenne en commission en fonction du nombre de tweets
+						</b>
+					</h5>
+				</div>
 
+				<div class="col-sm-12 text-center custom-bar-chart">
+					<canvas id="barTweetComission" ></canvas>	
+				</div>
+
+
+				
 				<!-- tweet vs rapport --	>
+				
+				
+				<!-- tweet vs presence en commission -->
+				<!-- <div class="col-sm-12 text-center">
+					<div class="embed-responsive embed-responsive-16by9">
+  						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/28.embed"></iframe>
+					</div>
+				</div> -->
+
 				<div class="col-sm-12 text-center">
 					<div class="embed-responsive embed-responsive-16by9">
   						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/26.embed"></iframe>
 					</div>
 				</div>
+
+
 				
-				<!-- tweet vs presence en commission -->
-				<div class="col-sm-12 text-center">
-					<div class="embed-responsive embed-responsive-16by9">
-  						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/28.embed"></iframe>
-					</div>
-				</div>
 
 
 				<!-- follower vs nb tweet parti -->
@@ -557,6 +577,8 @@
 				</div>
 
 
+
+
 				<div class="col-sm-12 text-justify">
 					<br/>
 					<h5>
@@ -587,6 +609,21 @@
 						</b>
 					</h5>
 					<br/>
+				</div>
+
+
+				<div class="col-sm-12 text-center">
+					
+					<br/>
+					<h5>
+						<b>
+							Tweets en fonction du nombre de followers
+						</b>
+					</h5>
+				</div>
+
+				<div class="col-sm-12 text-center custom-bubble-chart">
+					<canvas id="bubbleTweetFollower" ></canvas>	
 				</div>
 
 
@@ -694,6 +731,7 @@
 
 
 <!-- Chart.js -->
+<script src="js/tweets.js"></script>	
 <script src="js/Chart.min.js"></script>	
 <script src="js/Chart.PieceLabel.min.js"></script>	 
 <script src="js/data.js"></script>	 

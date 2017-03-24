@@ -25,3 +25,16 @@
 	}	
 }
 
+
+@media(max-width:991px){
+	.custom-bubble-chart{
+		min-height: 300px;
+	}	
+}
+
+
+@media(min-width:992px){
+	.custom-bubble-chart{
+		min-height: 600px;
+	}	
+}
