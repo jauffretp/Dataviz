@@ -16,10 +16,15 @@
 	<link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
 	<link href="css/animate.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
+    
 
 	<!-- template skin -->
 	<link id="t-colors" href="color/default.css" rel="stylesheet">
     
+
+    <link href="css/custom.css" rel="stylesheet">
+
+
     <!-- =======================================================
         Theme Name: Appland
         Theme URL: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/
@@ -50,9 +55,8 @@
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 			  	<ul class="nav navbar-nav">
 					<li><div id="cart"></div></li>
-					<li class="active"><a href="#intro">Acceuil</a></li>
-					<li><a href="#content1">L'activité</a> </li>
-					<li><a href="#content2">Les tweets</a> </li>
+					<li class="active"><a href="#intro">Accueil</a></li>
+					<!-- <li><a href="goodies.html">Bonus</a> </li> -->
 					<li><a href="#callaction">Nous contacter</a> </li>
 				</ul>
 				
@@ -64,6 +68,8 @@
         <!-- /.container -->
     </nav>
 	
+	
+
 	<!-- Section: intro -->
     <section id="intro" class="intro">
 		<div class="intro-content">
@@ -71,21 +77,35 @@
 				
 				<div class="row">
 
-					<div class="col-sm-12 text-center">
-						<h1>Analyse des données parlementaires</h1>
+					<!-- <div class="col-sm-12 text-center">
+						<h1 > <b>Parlementaires, que nous dit la data ?</b> </h1>
 						<br/>
 					</div>
+					 -->
+					<div class="col-sm-12 col-md-12 col-lg-12 slogan text-justify">
+						<!-- <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s"> -->
+						
+						<div>
+							<img src="img/depute.png" alt="assembleee" class="img-responsive center-block"/>
+  						</div>
+						<br/>
+						<br/>
+						<h5>
+							<b>
+								À seulement quelques semaines des élections présidentielles, le paysage politique est entaché de
+								multiples scandales. Nous avons décidé de regarder au plus près l’activité de nos députés et d’apporter
+								un peu de transparence à nos concitoyens.
+							</b>
+						</h5>
+						<br/>
+						<h5>
+							<b>
+								Qui sont-ils ? Nous représentent-ils efficacement ? Existe-t-il potentiellement d’autres conflits
+								d’intérêts ? Décryptage.
+							</b>
+						</h5>
 
-					<div class="col-sm-12 col-md-12 col-lg-12 slogan text-center">
-						<div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-							<br/>
-							
-							<p>
-								Analyse des données parlementaires (activité parlementaire, présentiel, valise, collaborateurs) disponible en open data.
-
-							</p>
-
-							<br/>
+						<br/>
 						
 							
 						</div>
@@ -98,72 +118,299 @@
 	
 	<!-- /Section: intro -->
 	<div class="divider-short"></div>
+
+	<section id="collaborateurs" class="home-section">
 	
-    <section id="content1" class="home-section">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-12 text-center heading">
+					<h1><b>Les collaborateurs parlementaires</b></h1>
+				</div>
+					
+				<div class="col-sm-12 text-center">
+					<h5>
+						<b>
+							Un député sur huit emploie un membre de sa famille...
+						</b>
+					</h5>
+
+					<br/>
+				</div>
+
+
+				<div class="col-sm-12">
+					<img src="img/famille-depute.png" alt="assembleee" class="img-responsive center-block"/>
+				</div>
+
+				<!-- proportion famille employée -->
+				<!-- <div class="col-sm-12 text-center">
+					<div class="embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="//plot.ly/~mbwordup/5.embed"></iframe>
+					</div>
+				</div>
+				 -->
+
+
+				<!-- proportion famille employée chart.js -->
+				<div class="col-sm-12">
+					<br/>
+					<br/>
+					
+					<div class="col-sm-12 text-center">
+						<h5>
+							<b>
+								Député employant un membre de leur famille
+							</b>
+						</h5>
+					</div>
+
+
+					<div class="col-sm-6 col-sm-offset-3">
+						<canvas id="pieFamilleEmployee"></canvas>
+					</div>
+					
+				</div>
+
+				<div class="col-sm-12 text-center">
+					<br/>
+					<br/>
+					<div>
+						<img src="img/conjoint.png" alt="assembleee" class="img-responsive center-block"/>
+					</div>
+
+					<br/>
+					<br/>
+					<h5>
+						<b>
+							... potentiellement leur conjoint ?
+						</b>
+					</h5>
+
+					
+					<br/>
+				</div>
+
+				<div class="col-sm-12 text-justify">
+					<br/>
+					<br/>
+					
+					<h5>
+						<b>
+							Après le Penelope Gate et plus récemment la démission du ministre de l’intérieur Bruno Leroux, nous remarquons qu’il n’est pas rare qu’un parlementaire compte un ou plusieurs membres de sa famille parmi ses collaborateurs. Connaîtrons-nous de nouveaux scandales à ce sujet ?
+						</b>
+					</h5>
+
+					
+					<br/>
+					<br/>
+				</div>
+
+
+				
+				<!-- repartition sexe collaborateurs famille -->
+				<!-- <div class="col-sm-12 text-center">
+					<div class="embed-responsive embed-responsive-16by9">
+  						<iframe class="embed-responsive-item" src="//plot.ly/~mbwordup/7.embed"></iframe>
+					</div>
+				</div> -->
+
+
+				<div class="col-md-6 col-sm-12 text-center">
+						<div class="col-sm-12">
+							<h5>
+								<b>
+									Plus de femmes collaboratrices &laquo;familiales &raquo;...
+								</b>
+							</h5>
+							<br/>
+							<br/>
+							
+						</div>
+
+						<div class="col-sm-12">
+							<canvas id="pieSexeCollabFamille"></canvas>
+						</div>
+				</div>
+
+				<div class="col-md-6 col-sm-12 text-center">
+						<div class="col-sm-12">
+							<h5>
+								<b>
+									...que sur l'ensemble des collaborateurs parlementaires.
+								</b>
+								<br/>
+								<small> (et toujours plus de femmes collaboratrices que de femmes parlementaires)</small>
+							</h5>
+						</div>
+
+						<div class="col-sm-12">
+							<canvas id="pieSexeCollab"></canvas>
+						</div>
+				</div>
+
+				<!-- v2 -->
+				<div class="col-md-6 col-sm-12 text-center">
+						<div class="col-sm-12">
+							<br/>
+							<br/>
+							<h5>
+								<b>
+									Les députés femmes emploient des femmes...
+								</b>
+							</h5>
+						</div>
+
+						<div class="col-sm-12">
+							<canvas id="pieFemmeCollab"></canvas>
+						</div>
+				</div>
+
+				<div class="col-md-6 col-sm-12 text-center">
+						<div class="col-sm-12">
+							<br/>
+							<br/>
+							<h5>
+								<b>
+									...tout commes les députés hommes.
+								</b>
+							</h5>
+						</div>
+
+						<div class="col-sm-12">
+							<canvas id="pieHommeCollab"></canvas>
+						</div>
+				</div>														
+
+				
+
+				<div class="col-sm-12 text-justify">
+					
+					<br/>
+					<br/>
+					<h5>
+						<b>
+							Le nombre de collaborateurs employés varie d’un député à l’autre. Qu’en-est-il de leur efficacité ? Le nombre de collaborateurs a-t-il un impact sur la quantité de questions écrites et de rapports produits ?
+						</b>
+					</h5>
+				</div>
+
+				<div class="col-sm-12 text-center custom-bar-chart">
+					<canvas id="barCollabRapport" ></canvas>	
+				</div>
+
+				
+				<!-- aucune correlation activite et nombre de collab -->
+
+				
+				<div class="col-sm-12 text-justify">
+				<br/>
+				<h5>
+					<b> 
+						Plus un député a de collaborateurs et plus il produit.
+
+					</b>
+				</h5>
+
+			</div>
+
+				
+				
+
+			</div>	
+		</div>
+	</section>
+
+	<div class="divider-short"></div>
+	
+
+    <section id="age-activite" class="home-section">
 	
 		<div class="container">
 			<div class="row text-center heading">
-				<h2>L'activité</h2>
+				<img src="img/assemblee-custom.png" alt="assembleee" class="img-responsive center-block"/>
+
+				<h1><b>L'activité parlementaire</b></h1>
+			</div>
+
+			<div class="col-sm-12 text-justify">
+				<br/>
+				<h5>
+					<b> Que font nos députés à l’Assemblée Nationale ? Quelle est la part de réalité dans les préjugés que nous avons sur le présentiel de nos élus ?
+					</b>
+				</h5>
+				<br/>
 			</div>
 			
 			
 			<div class="row">
-				<div class="col-sm-12 text-center">
-					<!-- presence commission vs nb_mandats -->
-					<div class="embed-responsive embed-responsive-16by9">
-  						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/16.embed"></iframe>
-					</div>
 
-					
-				</div>
 				
 
-				<!-- amendements adoptés vs age -->
 				<div class="col-sm-12 text-center">
-					<div class="embed-responsive embed-responsive-16by9">
-  						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/10.embed"></iframe>
-					</div>
-
 					
+					<br/>
+					<br/>
+					<h5>
+						<b>
+							L'ancienneté favorise l'absentéisme.
+						</b>
+					</h5>
 				</div>
+
+				<div class="col-sm-12 text-center custom-bar-chart">
+					<canvas id="barPresenceMandats" ></canvas>	
+				</div>
+
+				
+				<div class="col-sm-12 text-center">
+					
+					<br/>
+					<br/>
+					<h5>
+						<b>
+							L'ancienneté ne favorise pas le travail écrit.
+						</b>
+					</h5>
+				</div>
+
+				<div class="col-sm-12 text-center custom-bar-chart">
+					<canvas id="barRapportMandats" ></canvas>	
+				</div>
+
+				<div class="col-sm-12 text-center">
+					
+					<br/>
+					<br/>
+					<h5>
+						<b>
+							Les jeunes adoptent beaucoup plus d’amendements.
+						</b>
+					</h5>
+				</div>
+
+				<div class="col-sm-12 text-center custom-long-bar-chart">
+					<canvas id="barAmendementsAge" ></canvas>	
+				</div>
+
 
 				<!-- interventions courtes en hemicycle -->
 				<div class="col-sm-12 text-center">
-					<div class="embed-responsive embed-responsive-16by9">
-  						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/8.embed"></iframe>
-					</div>
+					
+					<br/>
+					<br/>
+					<h5>
+						<b>
+							Nos députés les plus agés interviennent de moins en moins en vieillissant.
+						</b>
+					</h5>
 				</div>
 
-				<!-- age vs semaine de presence -->
-				<div class="col-sm-12 text-center">
-					<div class="embed-responsive embed-responsive-16by9">
-  						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/6.embed"></iframe>
-					</div>
+				<div class="col-sm-12 text-center custom-long-bar-chart">
+					<canvas id="barInterventionsAge" ></canvas>	
 				</div>
 
-				<!-- rapport vs nombre mandats -->
-				<div class="col-sm-12 text-center">
-					<div class="embed-responsive embed-responsive-16by9">
-  						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/14.embed"></iframe>
-					</div>
-				</div>
-
-				<!-- rapport vs parti politique -->
-				<div class="col-sm-12 text-center">
-					<div class="embed-responsive embed-responsive-16by9">
-  						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/20.embed"></iframe>
-					</div>
-				</div>
-
-
-				<!-- presence commision vs parti -->
-				<div class="col-sm-12 text-center">
-					<div class="embed-responsive embed-responsive-16by9">
-  						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/18.embed"></iframe>
-					</div>
-				</div>
-
-
+				
 			</div>
 		</div>
 
@@ -171,45 +418,153 @@
 
 	<div class="divider-short"></div>
 	
-    <section id="content2" class="home-section">
+    <section id="tweets" class="home-section">
 	
 		<div class="container">
 			<div class="row text-center heading">
-				<h2>Les tweets</h2>
+				<img src="img/twitter_depute.png" alt="assembleee" class="img-responsive center-block"/>
+				<h1><b>Les tweets</b></h1>
 			</div>
 			
 			
 			<div class="row">
 
-				<!-- follower vs nmobre de tweet -->
-				<div class="col-sm-12 text-center">
-					<div class="embed-responsive embed-responsive-16by9">
-  						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/22.embed"></iframe>
-					</div>
+				<div class="col-sm-12 text-justify">
+					<br/>
+					<h5>
+						<b> 
+							Certains parlementaires ont de nombreux collaborateurs sans pour autant être plus actif au sein de l’Assemblée Nationale. Qu’en est-il de l’efficacité de nos élus au sein de la vie du parlement ? Certains députés sont très actifs sur les réseaux sociaux, notamment sur Twitter. Leur présence sur les réseaux sociaux est-elle à la hauteur de leur engagement à l’Assemblée Nationale ?	 
+						</b>
+					</h5>
+					<br/>
 				</div>
-				
 
-				<!-- tweet vs sexe -->
+
+
 				<div class="col-sm-12 text-center">
-					<div class="embed-responsive embed-responsive-16by9">
-  						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/24.embed"></iframe>
-					</div>
+					
+					<br/>
+					<h5>
+						<b>
+							Présence moyenne en commission en fonction du nombre de tweets
+						</b>
+					</h5>
 				</div>
+
+				<div class="col-sm-12 text-center custom-long-bar-chart">
+					<canvas id="barTweetComission" ></canvas>	
+				</div>
+
+
 				
-				<!-- tweet vs rapport -->
-				<div class="col-sm-12 text-center">
-					<div class="embed-responsive embed-responsive-16by9">
-  						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/26.embed"></iframe>
-					</div>
-				</div>
+				<!-- tweet vs rapport --	>
+				
 				
 				<!-- tweet vs presence en commission -->
-				<div class="col-sm-12 text-center">
+				<!-- <div class="col-sm-12 text-center">
 					<div class="embed-responsive embed-responsive-16by9">
   						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/28.embed"></iframe>
 					</div>
+				</div> -->
+
+				<!-- <div class="col-sm-12 text-center">
+					<div class="embed-responsive embed-responsive-16by9">
+  						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/26.embed"></iframe>
+					</div>
+				</div> -->
+
+
+				
+
+
+				<!-- follower vs nb tweet parti -->
+				<!-- <div class="col-sm-12 text-center">
+					<div class="embed-responsive embed-responsive-16by9">
+						
+  						<iframe class="embed-responsive-item" src="//plot.ly/~SamSyms/7.embed"></iframe>
+					</div>
+				</div>
+ -->
+
+
+
+				<!-- follower vs nmobre de tweet -->
+				<!-- <div class="col-sm-12 text-center">
+					<div class="embed-responsive embed-responsive-16by9">
+						
+  						<iframe class="embed-responsive-item" src="//plot.ly/~rosuelalexis/22.embed"></iframe>
+  						
+					</div>
+				</div> -->
+
+
+
+
+				<div class="col-sm-12 text-justify">
+					<br/>
+					<h5>
+						<b> 
+							Il semblerait que, pour certains députés, communiquer sur Twitter ne permette plus de libérer assez de temps pour être présent en commission. Ont-ils gagné en popularité ? Quel député a la meilleure stratégie de communication digitale ? 
+						</b>
+					</h5>
+					<br/>	
 				</div>
 				
+
+
+				<!-- <div class="col-sm-12 text-center">
+					<div class="embed-responsive embed-responsive-16by9">
+						
+  						<iframe class="embed-responsive-item" src="//plot.ly/~SamSyms/8.embed"></iframe>
+  						
+					</div>
+				</div> -->
+				
+				
+
+				
+
+
+				<div class="col-sm-12 text-center">
+					
+					<br/>
+					<h5>
+						<b>
+							Tweets en fonction du nombre de followers
+						</b>
+					</h5>
+				</div>
+
+				<div class="col-sm-12 text-center custom-bubble-chart">
+					<canvas id="bubbleTweetFollower" ></canvas>	
+				</div>
+
+
+				
+				
+				<div class="col-sm-12 text-justify">
+					<br/>
+					<br/>
+					<h5>
+						<b> 
+							
+							NKM la plus populaire (en bas à droite en bleu)
+							<br/>
+							<small>700 000 followers pour seulement 10 000 tweets.</small>
+							<br/>
+							<br/>
+							Denis Baupin en manque d'attention (en haut à gauche en vert) <small> #ForeverAlone</small>
+							<br/>
+							<small>70 000 tweets et seulement 17 000 followers.</small>
+
+							<br/>
+							<br/>
+
+
+						</b>
+					</h5>
+					<br/>
+				</div>
 
 
 			</div>
@@ -218,6 +573,9 @@
 	</section>
 
 
+	<div class="divider-short"></div>
+	
+    
 
 	<section id="callaction" class="home-section paddingtop-40">	
            <div class="container">
@@ -226,21 +584,21 @@
 						<div class="callaction">
 							<div class="row">
 								<div class="col-md-8">
-									<div class="wow fadeInUp" data-wow-delay="0.1s">
+									<!-- <div class="wow fadeInUp" data-wow-delay="0.1s"> -->
 									<div class="cta-text">
 									<h3>Plus d'informations </h3>
 									<p>Shootez nous un mail</p>
 
 
 									</div>
-									</div>
+									<!-- </div> -->
 								</div>
 								<div class="col-md-4">
-									<div class="wow lightSpeedIn" data-wow-delay="0.1s">
+									<!-- <div class="wow lightSpeedIn" data-wow-delay="0.1s"> -->
 										<div class="cta-btn">
-										<a href="mailto:teamdataviz@mail.fr" class="btn btn-skin btn-lg">Contact us</a>	
+										<a href="mailto:teamdataviz@mail.fr" class="btn btn-skin btn-lg">Nous contacter</a>	
 										</div>
-									</div>
+									<!-- </div> -->
 								</div>
 							</div>
 						</div>
@@ -249,6 +607,8 @@
             </div>
 	</section>	
 
+
+	
 	<footer>
 	
 
@@ -257,7 +617,10 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<p>
-						<small>Nous avons basé nos analyses sur les <a href="http://cpc.regardscitoyens.org/trac/wiki/API"><i>données</i></a> du 21 Février 2017 mise à disposition par Regards Citoyens à partir de l'Assemblée Nationale et du Journal Officiel. 
+						<small>Pour l'activité parlementaire, nous avons basé nos analyses sur les <a href="http://cpc.regardscitoyens.org/trac/wiki/API"><i>données</i></a> du 21 Février 2017 mise à disposition par Regards Citoyens à partir de l'Assemblée Nationale et du Journal Officiel. 
+						</small>
+						<br/>
+						<small>Pour les tweets et les collaborateurs parlementaires, nous avons utilisés les données du <a href="https://github.com/regardscitoyens"><i> compte github</i></a> mise à disposition par Regards Citoyens en Mars 2017.  
 						</small>
 					</p>
 
@@ -267,13 +630,13 @@
 				<div class="col-sm-6 col-md-6 col-lg-6">
 					
 
-					<ul class="social">
+				<!-- <ul class="social">
 						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
 						<li><a href="#"><i class="fa fa-youtube"></i></a></li>
 					</ul>
-				
+				 -->
 					<div class="wow fadeInLeft" data-wow-delay="0.1s">
 					<div class="text-left">
 					<p>&copy;Copyright - Appland. All rights reserved.</p>
@@ -303,15 +666,28 @@
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 
-	<!-- Core JavaScript Files -->
-    <script src="js/jquery.min.js"></script>	 
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/jquery.scrollTo.js"></script>
-	<script src="js/nivo-lightbox.min.js"></script>
-    <script src="js/custom.js"></script>
-    
+
+
+<!-- Chart.js -->
+<script src="js/tweets.js"></script>	
+<script src="js/Chart.min.js"></script>	
+<script src="js/Chart.PieceLabel.min.js"></script>	 
+<script src="js/data.js"></script>	 
+
+
+<!-- Core JavaScript Files -->
+
+
+
+<script src="js/jquery.min.js"></script>	 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.scrollTo.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/custom.js"></script>
+
+
 </body>
 
 </html>

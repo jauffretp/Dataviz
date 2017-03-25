@@ -1,0 +1,53 @@
+/*@media(max-width:991px){
+	.custom-bar-chart:{
+		min-height: 200px;
+	}
+
+};
+
+@media(min-width:992px){
+	.custom-bar-chart:{
+		min-height: 500px; 
+	}
+};*/
+
+
+@media(max-width:991px){
+	.custom-bar-chart{
+		min-height: 200px;
+	}	
+}
+
+
+@media(min-width:992px){
+	.custom-bar-chart{
+		min-height: 450px;
+	}	
+}
+
+@media(max-width:991px){
+	.custom-long-bar-chart{
+		min-height: 350px;
+	}	
+}
+
+
+@media(min-width:992px){
+	.custom-long-bar-chart{
+		min-height: 500px;
+	}	
+}
+
+
+@media(max-width:991px){
+	.custom-bubble-chart{
+		min-height: 600px;
+	}	
+}
+
+
+@media(min-width:992px){
+	.custom-bubble-chart{
+		min-height: 700px;
+	}	
+}
