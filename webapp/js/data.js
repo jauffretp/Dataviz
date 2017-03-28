@@ -307,6 +307,7 @@ var dataBarCollabRapport = {
     ]
 };
 
+nbDeputeCollab = [53,225,193,94]
 
 var barCollabRapport = new Chart(ctx, {
     type: 'bar',
@@ -318,10 +319,10 @@ var barCollabRapport = new Chart(ctx, {
       			callbacks: {
       			    label: function (tooltipItems, data) {
       			        if (tooltipItems.datasetIndex === 0){
-      			        	return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' rapports produits en moyenne' ;
+      			        	return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' rapports produits en moyenne pour ' + nbDeputeCollab[tooltipItems.index] + " députés"  ;
       			        }
       			        else {
-      			        	return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' propositions écrites en moyenne' ;
+      			        	return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' propositions écrites en moyenne pour ' + nbDeputeCollab[tooltipItems.index] + " députés" ;
       			        }
 
       			        	
