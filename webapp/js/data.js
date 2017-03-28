@@ -267,7 +267,7 @@ var dataPieHommeCollab = new Chart(ctx, {
 
 ctx = document.getElementById("barCollabRapport").getContext("2d");
 var dataBarCollabRapport = {
-    labels: ["1-2 collaborateur","3-4 collaborateurs","5+ collaborateurs"],
+    labels: ["1-2 collaborateur","3 collaborateurs", "4 collaborateurs","5+ collaborateurs"],
     datasets: [
         {
             label: "Nombre moyen de rapports produits",
@@ -275,14 +275,16 @@ var dataBarCollabRapport = {
                 'rgba(88, 148, 244,0.8)',
                 'rgba(88, 148, 244,0.8)',
                 'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)'
             ],
             borderColor: [
                'rgba(88, 148, 244,1)',
                'rgba(88, 148, 244,1)',
                'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)'
             ],
             borderWidth: 1,
-            data: [0.745, 1.095,1.3025]
+            data: [0.698, 1.102,1.093,1.468]
         },
         {
             label: "Nombre moyen de propositions écrites",
@@ -290,14 +292,16 @@ var dataBarCollabRapport = {
                 'rgba(43, 219, 184,0.8)',
                 'rgba(43, 219, 184,0.8)',
                 'rgba(43, 219, 184,0.8)',
+                'rgba(43, 219, 184,0.8)'
             ],
             borderColor: [
+               'rgba(43, 219, 184,1)',
                'rgba(43, 219, 184,1)',
                'rgba(43, 219, 184,1)',
                'rgba(43, 219, 184,1)'
             ],
             borderWidth: 1,
-            data:[0.865, 0.58,1.6125]
+            data:[0.264,0.476,0.679,1.670]
             
         }
     ]
