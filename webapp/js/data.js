@@ -303,7 +303,25 @@ var dataBarCollabRapport = {
             borderWidth: 1,
             data:[0.264,0.476,0.679,1.670]
             
-        }
+        },
+        // {
+        //     label: "Nombre moyen de questions écrites",
+        //     backgroundColor: [
+        //         'rgba(43, 219, 184,0.8)',
+        //         'rgba(43, 219, 184,0.8)',
+        //         'rgba(43, 219, 184,0.8)',
+        //         'rgba(43, 219, 184,0.8)'
+        //     ],
+        //     borderColor: [
+        //        'rgba(43, 219, 184,1)',
+        //        'rgba(43, 219, 184,1)',
+        //        'rgba(43, 219, 184,1)',
+        //        'rgba(43, 219, 184,1)'
+        //     ],
+        //     borderWidth: 1,
+        //     data:[9.113,15.169,17.606,21.468]
+            
+        // }
     ]
 };
 
@@ -331,6 +349,49 @@ var barCollabRapport = new Chart(ctx, {
       		}	
       }
 });
+
+ctx = document.getElementById("barCollabQuestions").getContext("2d");
+var dataBarCollabRapport = {
+    labels: ["1-2 collaborateur","3 collaborateurs", "4 collaborateurs","5+ collaborateurs"],
+    datasets: [
+        {
+            label: "Nombre moyen de questions écrites",
+            backgroundColor: [
+               'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)',
+                'rgba(88, 148, 244,0.8)'
+            ],
+            borderColor: [
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)',
+               'rgba(88, 148, 244,1)'
+            ],
+            borderWidth: 1,
+            data:[9.113,15.169,17.606,21.468]
+            
+        }
+    ]
+};
+var barCollabQuestions = new Chart(ctx, {
+    type: 'bar',
+    data: dataBarCollabRapport,
+    options:{
+        responsive: true,
+        maintainAspectRatio: false,
+        tooltips: {
+            callbacks: {
+                label: function (tooltipItems, data) {
+                 
+                  return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' questions écrites en moyenne pour ' + nbDeputeCollab[tooltipItems.index] + " députés"  ;
+                      
+                }
+            }
+          } 
+      }
+});
+
 
 ctx = document.getElementById("barPresenceMandats").getContext("2d");
 var dataBarPresenceMandats = {
