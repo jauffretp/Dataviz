@@ -592,7 +592,7 @@ var dataTweetComission = {
     labels: ["Entre 0 et 10K tweets","Entre 10K et 20K tweets","Entre 20K et 30K tweets","Plus de 30K tweets"],
     datasets: [
         {
-            label: "Nombre moyen d'interventions courtes en hémicycle",
+            label: "Nombre moyen de semaines de présence en commission",
             backgroundColor: [
                 'rgba(88, 148, 244,0.8)',
                 'rgba(88, 148, 244,0.8)',
@@ -607,6 +607,23 @@ var dataTweetComission = {
             ],
             borderWidth: 1,
             data: [43.68, 37.18, 28.75, 17]
+        },
+        {
+            label: "Nombre moyen de semaines de présence générale",
+            backgroundColor: [
+                'rgba(43, 219, 184,0.8)',
+                'rgba(43, 219, 184,0.8)',
+                'rgba(43, 219, 184,0.8)',
+                'rgba(43, 219, 184,0.8)'
+            ],
+            borderColor: [
+               'rgba(43, 219, 184,1)',
+               'rgba(43, 219, 184,1)',
+               'rgba(43, 219, 184,1)',
+               'rgba(43, 219, 184,1)'
+            ],
+            borderWidth: 1,
+            data: [27.12, 24.91, 26, 14.5]
         }
     ] 
 };
@@ -620,10 +637,12 @@ var barTweetComission = new Chart(ctx, {
         tooltips: {
             callbacks: {
                 label: function (tooltipItems, data) {
-                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en comission en moyenne' ;
-                    
-
-                      
+                    if (tooltipItems.datasetIndex === 0){
+                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en commission en moyenne' ;
+                    }
+                    else {
+                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en commission ou hémicycle en moyenne';
+                    }
                 }
             }
           } 
