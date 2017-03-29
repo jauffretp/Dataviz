@@ -8,51 +8,51 @@ Chart.defaults.global.animation.duration = 0
 
 // var ctx = document.getElementById("pieFamilleEmployee").getContext("2d");
 
-console.log(ctx)
+// console.log(ctx)
 
-var dataEmploiFamille = {
-    labels: [
-        "Emploie un membre de leur famille",
-        "N'emploie pas de membre de leur famille",
-    ],
-    datasets: [
-        {
-            data: [75, 490],
-            backgroundColor: [
-                "#ed0909",
-                "#5894f4"
-            ],
-            hoverBackgroundColor: [
-                "#ed0909",
-                "#5894f4"
-            ]
-        }]
-};
+// var dataEmploiFamille = {
+    // labels: [
+        // "Emploie un membre de leur famille",
+        // "N'emploie pas de membre de leur famille",
+    // ],
+    // datasets: [
+        // {
+            // data: [75, 490],
+            // backgroundColor: [
+                // "#ed0909",
+                // "#5894f4"
+            // ],
+            // hoverBackgroundColor: [
+                // "#ed0909",
+                // "#5894f4"
+            // ]
+        // }]
+// };
 
 
-var pieFamilleCollab = new Chart(ctx, {
-    type: 'doughnut',
-    data: dataEmploiFamille,
-    options: {
-        responsive: true,
-        pieceLabel: {
+// var pieFamilleCollab = new Chart(ctx, {
+    // type: 'doughnut',
+    // data: dataEmploiFamille,
+    // options: {
+        // responsive: true,
+        // pieceLabel: {
       		// mode 'label', 'value' or 'percentage', default is 'percentage'
-      		mode: 'percentage',
-      		fontSize: 15,
-      		fontColor: '#330000',
-      		fontFamily: "'Lato', sans-serif",
-      		fontStyle: 'bold'
+      		// mode: 'percentage',
+      		// fontSize: 15,
+      		// fontColor: '#330000',
+      		// fontFamily: "'Lato', sans-serif",
+      		// fontStyle: 'bold'
 
-		},
-		tooltips: {
-			callbacks: {
-			    label: function (tooltipItems, data) {
-			        return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' députés' ;
-			    }
-			}
-		}	
-    }
-});
+		// },
+		// tooltips: {
+			// callbacks: {
+			    // label: function (tooltipItems, data) {
+			        // return  data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' députés' ;
+			    // }
+			// }
+		// }	
+    // }
+// });
 
 
 
