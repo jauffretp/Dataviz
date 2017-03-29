@@ -6,7 +6,7 @@ Chart.defaults.global.animation.duration = 0
 
 //Chart.defaults.global.title.fontSize = 20;
 
-var ctx = document.getElementById("pieFamilleEmployee").getContext("2d");
+// var ctx = document.getElementById("pieFamilleEmployee").getContext("2d");
 
 console.log(ctx)
 
