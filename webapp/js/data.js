@@ -592,6 +592,7 @@ var barInterventionsAge = new Chart(ctx, {
 
 ctx = document.getElementById("barTweetComission").getContext("2d");
 
+var nbDeputeTweets = [285,22,4,2]
 var dataTweetComission = {
     labels: ["Entre 0 et 10K tweets","Entre 10K et 20K tweets","Entre 20K et 30K tweets","Plus de 30K tweets"],
     datasets: [
@@ -642,10 +643,10 @@ var barTweetComission = new Chart(ctx, {
             callbacks: {
                 label: function (tooltipItems, data) {
                     if (tooltipItems.datasetIndex === 0){
-                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en commission en moyenne' ;
+                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en commission en moyenne pour ' + nbDeputeTweets[tooltipItems.index] + " députés" ;
                     }
                     else {
-                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en commission ou hémicycle en moyenne';
+                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en commission ou hémicycle en moyenne  pour ' + nbDeputeTweets[tooltipItems.index] + " députés" ;
                     }
                 }
             }
