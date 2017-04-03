@@ -325,7 +325,7 @@ var dataBarCollabRapport = {
     ]
 };
 
-nbDeputeCollab = [53,225,193,94]
+var nbDeputeCollab = [53,225,193,94]
 
 var barCollabRapport = new Chart(ctx, {
     type: 'bar',
@@ -349,6 +349,7 @@ var barCollabRapport = new Chart(ctx, {
       		}	
       }
 });
+
 
 ctx = document.getElementById("barCollabQuestions").getContext("2d");
 var dataBarCollabRapport = {
@@ -392,6 +393,8 @@ var barCollabQuestions = new Chart(ctx, {
       }
 });
 
+var nbDeputeMandats = [72,278,201,14]
+
 
 ctx = document.getElementById("barPresenceMandats").getContext("2d");
 var dataBarPresenceMandats = {
@@ -427,7 +430,7 @@ var barPresenceMandats = new Chart(ctx, {
         tooltips: {
             callbacks: {
                 label: function (tooltipItems, data) {
-                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en moyenne' ;
+                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en moyenne pour ' + nbDeputeMandats[tooltipItems.index ]+ " députés" ;
                     
 
                       
@@ -480,7 +483,7 @@ var barRapportsMandats = new Chart(ctx, {
         tooltips: {
             callbacks: {
                 label: function (tooltipItems, data) {
-                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' rapports produits en moyenne' ;
+                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' rapports produits en moyenne pour ' + nbDeputeMandats[tooltipItems.index ]+ " députés" ;
                 }
             }
           } 
@@ -488,6 +491,7 @@ var barRapportsMandats = new Chart(ctx, {
 });
 
 
+var nbDeputeAge = [1,15,85,181,190,93]
 
 ctx = document.getElementById("barAmendementsAge").getContext("2d");
 
@@ -525,7 +529,7 @@ var barAmendementsAge = new Chart(ctx, {
         tooltips: {
             callbacks: {
                 label: function (tooltipItems, data) {
-                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' amendements adoptés en moyenne' ;
+                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' amendements adoptés en moyenne pour ' + nbDeputeAge[tooltipItems.index + 1]+ " députés" ;
                     
 
                       
@@ -574,7 +578,7 @@ var barInterventionsAge = new Chart(ctx, {
         tooltips: {
             callbacks: {
                 label: function (tooltipItems, data) {
-                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' interventions courtes en hémicycle en moyenne' ;
+                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' interventions courtes en hémicycle en moyenne pour '+ nbDeputeAge[tooltipItems.index ]+ " députés" ;
                     
 
                       
