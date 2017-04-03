@@ -267,7 +267,7 @@ var dataPieHommeCollab = new Chart(ctx, {
 
 ctx = document.getElementById("barCollabRapport").getContext("2d");
 var dataBarCollabRapport = {
-    labels: ["1-2 collaborateur","3 collaborateurs", "4 collaborateurs","5+ collaborateurs"],
+    labels: ["1 à 2 collaborateur","3 collaborateurs", "4 collaborateurs","plus de 5 collaborateurs"],
     datasets: [
         {
             label: "Nombre moyen de rapports produits",
@@ -352,7 +352,7 @@ var barCollabRapport = new Chart(ctx, {
 
 ctx = document.getElementById("barCollabQuestions").getContext("2d");
 var dataBarCollabRapport = {
-    labels: ["1-2 collaborateur","3 collaborateurs", "4 collaborateurs","5+ collaborateurs"],
+    labels: ["1 à 2 collaborateur","3 collaborateurs", "4 collaborateurs","plus de 5 collaborateurs"],
     datasets: [
         {
             label: "Nombre moyen de questions écrites",
@@ -398,7 +398,7 @@ var dataBarPresenceMandats = {
     labels: [" 1er mandat "," 2e mandat "," 3e mandat ", " 4e mandat "],
     datasets: [
         {
-            label: "Présence moyenne en comission",
+            label: "Présence moyenne en commission",
             backgroundColor: [
                 'rgba(88, 148, 244,0.8)',
                 'rgba(88, 148, 244,0.8)',
