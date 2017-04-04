@@ -267,7 +267,7 @@ var dataPieHommeCollab = new Chart(ctx, {
 
 ctx = document.getElementById("barCollabRapport").getContext("2d");
 var dataBarCollabRapport = {
-    labels: ["1-2 collaborateur","3 collaborateurs", "4 collaborateurs","5+ collaborateurs"],
+    labels: ["1 à 2 collaborateur","3 collaborateurs", "4 collaborateurs","plus de 5 collaborateurs"],
     datasets: [
         {
             label: "Nombre moyen de rapports produits",
@@ -325,7 +325,7 @@ var dataBarCollabRapport = {
     ]
 };
 
-nbDeputeCollab = [53,225,193,94]
+var nbDeputeCollab = [53,225,193,94]
 
 var barCollabRapport = new Chart(ctx, {
     type: 'bar',
@@ -350,9 +350,10 @@ var barCollabRapport = new Chart(ctx, {
       }
 });
 
+
 ctx = document.getElementById("barCollabQuestions").getContext("2d");
 var dataBarCollabRapport = {
-    labels: ["1-2 collaborateur","3 collaborateurs", "4 collaborateurs","5+ collaborateurs"],
+    labels: ["1 à 2 collaborateur","3 collaborateurs", "4 collaborateurs","plus de 5 collaborateurs"],
     datasets: [
         {
             label: "Nombre moyen de questions écrites",
@@ -392,13 +393,15 @@ var barCollabQuestions = new Chart(ctx, {
       }
 });
 
+var nbDeputeMandats = [72,278,201,14]
+
 
 ctx = document.getElementById("barPresenceMandats").getContext("2d");
 var dataBarPresenceMandats = {
     labels: [" 1er mandat "," 2e mandat "," 3e mandat ", " 4e mandat "],
     datasets: [
         {
-            label: "Présence moyenne en comission",
+            label: "Présence moyenne en commission",
             backgroundColor: [
                 'rgba(88, 148, 244,0.8)',
                 'rgba(88, 148, 244,0.8)',
@@ -427,7 +430,7 @@ var barPresenceMandats = new Chart(ctx, {
         tooltips: {
             callbacks: {
                 label: function (tooltipItems, data) {
-                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en moyenne' ;
+                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en moyenne pour ' + nbDeputeMandats[tooltipItems.index ]+ " députés" ;
                     
 
                       
@@ -480,7 +483,7 @@ var barRapportsMandats = new Chart(ctx, {
         tooltips: {
             callbacks: {
                 label: function (tooltipItems, data) {
-                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' rapports produits en moyenne' ;
+                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' rapports produits en moyenne pour ' + nbDeputeMandats[tooltipItems.index ]+ " députés" ;
                 }
             }
           } 
@@ -488,6 +491,7 @@ var barRapportsMandats = new Chart(ctx, {
 });
 
 
+var nbDeputeAge = [1,15,85,181,190,93]
 
 ctx = document.getElementById("barAmendementsAge").getContext("2d");
 
@@ -525,7 +529,7 @@ var barAmendementsAge = new Chart(ctx, {
         tooltips: {
             callbacks: {
                 label: function (tooltipItems, data) {
-                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' amendements adoptés en moyenne' ;
+                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' amendements adoptés en moyenne pour ' + nbDeputeAge[tooltipItems.index + 1]+ " députés" ;
                     
 
                       
@@ -574,7 +578,7 @@ var barInterventionsAge = new Chart(ctx, {
         tooltips: {
             callbacks: {
                 label: function (tooltipItems, data) {
-                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' interventions courtes en hémicycle en moyenne' ;
+                    return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' interventions courtes en hémicycle en moyenne pour '+ nbDeputeAge[tooltipItems.index ]+ " députés" ;
                     
 
                       
@@ -588,6 +592,7 @@ var barInterventionsAge = new Chart(ctx, {
 
 ctx = document.getElementById("barTweetComission").getContext("2d");
 
+var nbDeputeTweets = [285,22,4,2]
 var dataTweetComission = {
     labels: ["Entre 0 et 10K tweets","Entre 10K et 20K tweets","Entre 20K et 30K tweets","Plus de 30K tweets"],
     datasets: [
@@ -638,10 +643,10 @@ var barTweetComission = new Chart(ctx, {
             callbacks: {
                 label: function (tooltipItems, data) {
                     if (tooltipItems.datasetIndex === 0){
-                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en commission en moyenne' ;
+                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en commission en moyenne pour ' + nbDeputeTweets[tooltipItems.index] + " députés" ;
                     }
                     else {
-                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en commission ou hémicycle en moyenne';
+                      return data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] + ' semaines de présence en commission ou hémicycle en moyenne  pour ' + nbDeputeTweets[tooltipItems.index] + " députés" ;
                     }
                 }
             }
