@@ -401,7 +401,7 @@ var dataBarPresenceMandats = {
     labels: [" 1er mandat "," 2e mandat "," 3e mandat ", " 4e mandat "],
     datasets: [
         {
-            label: "Présence moyenne en commission",
+            label: "Présence moyenne en commission (en nombre de semaines au cours des 12 derniers mois)",
             backgroundColor: [
                 'rgba(88, 148, 244,0.8)',
                 'rgba(88, 148, 244,0.8)',
